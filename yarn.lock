@@ -27,6 +27,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@actor-core/cli@workspace:packages/actor-core-cli"
   dependencies:
+    "@actor-core/nodejs": "workspace:^"
     "@inkjs/ui": "npm:^2.0.0"
     "@rivet-gg/api": "npm:^24.6.2"
     "@sentry/esbuild-plugin": "npm:^3.2.0"
@@ -38,6 +39,7 @@ __metadata:
     "@types/which": "npm:^3.0.4"
     actor-core: "workspace:*"
     bundle-require: "npm:^5.1.0"
+    chokidar: "npm:^4.0.3"
     commander: "npm:^13.1.0"
     esbuild: "npm:^0.25.1"
     execa: "npm:^9.5.2"
@@ -108,7 +110,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@actor-core/nodejs@workspace:packages/platforms/nodejs":
+"@actor-core/nodejs@workspace:^, @actor-core/nodejs@workspace:packages/platforms/nodejs":
   version: 0.0.0-use.local
   resolution: "@actor-core/nodejs@workspace:packages/platforms/nodejs"
   dependencies:
@@ -3653,6 +3655,7 @@ __metadata:
     eventsource: "npm:^3.0.5"
     hono: "npm:^4.7.0"
     invariant: "npm:^2.2.4"
+    nanoevents: "npm:^9.1.0"
     on-change: "npm:^5.0.1"
     p-retry: "npm:^6.2.1"
     tsup: "npm:^8.4.0"
@@ -6677,6 +6680,13 @@ __metadata:
   dependencies:
     node-gyp: "npm:latest"
   checksum: 10c0/971f963b8120631880fa47a389c71b00cadc1c1b00ef8f147782a3f4387d4fc8195d0695911272d57438c11562fb27b24c4ae5f8c05d5e4eeb4478ba51bb73c5
+  languageName: node
+  linkType: hard
+
+"nanoevents@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "nanoevents@npm:9.1.0"
+  checksum: 10c0/5fb48e6fc1d3102daddaeffd6eada907c25b1c8554dcc648e9cb0a72979a1ab3ee56ffa2d2b3e566a8e561a9e2992a3783493c61cfaaa096b2986d56dbbc1ca5
   languageName: node
   linkType: hard
 

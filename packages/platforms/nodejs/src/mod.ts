@@ -14,7 +14,10 @@ import { type InputConfig, ConfigSchema } from "./config";
 
 export { InputConfig as Config } from "./config";
 
-export function createRouter(app: ActorCoreApp<any>, inputConfig?: InputConfig): {
+export function createRouter(
+	app: ActorCoreApp<any>,
+	inputConfig?: InputConfig,
+): {
 	router: Hono;
 	injectWebSocket: NodeWebSocket["injectWebSocket"];
 } {
@@ -60,7 +63,10 @@ export function createRouter(app: ActorCoreApp<any>, inputConfig?: InputConfig):
 	}
 }
 
-export function serve(app: ActorCoreApp<any>, inputConfig?: InputConfig): ServerType {
+export function serve(
+	app: ActorCoreApp<any>,
+	inputConfig?: InputConfig,
+): ServerType {
 	const config = ConfigSchema.parse(inputConfig);
 
 	const { router, injectWebSocket } = createRouter(app, config);
